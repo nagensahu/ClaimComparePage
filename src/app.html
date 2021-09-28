@@ -1,0 +1,445 @@
+<template>
+	<lightning-card title="Compare Claim Details">
+		<div class="slds-scrollable_x slds-p-around_small">
+			<!--Keep the width in vw to make sure that the div is responsive-->
+			<lightning-datatable key-field="id" data={lineitemData} columns={lineitemColumns} column-widths-mode="auto"
+				hide-checkbox-column>
+			</lightning-datatable>
+		</div>
+	</lightning-card>
+	<lightning-card title="Compare Claim Line Items">
+		<table class="slds-table slds-table_bordered slds-table_col-bordered">
+			<thead>
+				<tr class="slds-line-height_reset">
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Opportunity Name">Claim Number</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Opportunity Name">Line Item</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Stage">Rev Code</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Confidence">Diagnosis</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">POS</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">TOS</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">Billed Units</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">Billed Amount</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">Authorization</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">Paid Amount</div>
+					</th>
+					<th class="" scope="col">
+						<div class="slds-truncate" title="Contact">Disallow Code</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="slds-hint-parent slds-is-selected">
+					<td data-label="Account Name" rowspan="3">
+						<div class="slds-truncate" title="Cloudhub">255608384900</div>
+					</td>
+					<td data-label="Field Name" scope="row">
+						<div class="slds-truncate" title="Network Status">
+							Line Item 1
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent slds-is-selected">
+					<td data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Procedure">
+							Line Item 2
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent slds-is-selected">
+					<td data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Procedure">
+							Line Item 3
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent">
+					<td data-label="Account Name" rowspan="2">
+						<div class="slds-truncate" title="Cloudhub">366608384900</div>
+					</td>
+					<td data-label="Field Name" scope="row">
+						<div class="slds-truncate" title="Network Status">
+							Line Item 1
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent">
+					<td data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Procedure">
+							Line Item 2
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">
+							<a href="#" tabindex="-1">1</a>
+						</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent slds-is-selected">
+					<td data-label="Account Name" rowspan="2">
+						<div class="slds-truncate" title="Cloudhub">477608384900</div>
+					</td>
+					<td data-label="Field Name" scope="row">
+						<div class="slds-truncate" title="Network Status">
+							Line Item 1
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent slds-is-selected">
+					<td data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Procedure">
+							Line Item 2
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent">
+					<td data-label="Account Name" rowspan="2">
+						<div class="slds-truncate" title="Cloudhub">588608384900</div>
+					</td>
+					<td data-label="Field Name" scope="row">
+						<div class="slds-truncate" title="Network Status">
+							Line Item 1
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+				<tr class="slds-hint-parent">
+					<td data-label="Opportunity Name" scope="row">
+						<div class="slds-truncate" title="Procedure">
+							Line Item 2
+						</div>
+					</td>
+					<td data-label="Account Name">
+						<div class="slds-truncate" title="Cloudhub">99214</div>
+					</td>
+					<td data-label="Close Date">
+						<div class="slds-truncate" title="4/14/2015">
+							<a href="#" tabindex="-1">N509</a>
+						</div>
+					</td>
+					<td data-label="Prospecting">
+						<div class="slds-truncate" title="Prospecting">
+							<a href="#" tabindex="-1">11</a>
+						</div>
+					</td>
+					<td data-label="Confidence">
+						<div class="slds-truncate" title="20%">
+							<a href="#" tabindex="-1">OOPE</a>
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Contact">
+						<div class="slds-truncate" title="jrogers@cloudhub.com">
+							$123.45
+						</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">1</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">$123.45</div>
+					</td>
+					<td data-label="Amount">
+						<div class="slds-truncate" title="$25k">PXN NetworX Std Fee Sched</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</lightning-card>
+</template>
